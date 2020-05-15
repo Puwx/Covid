@@ -26,7 +26,7 @@ for row in body.find_all('tr'):
         row = [td.text for td in row.find_all('td')]
         dataRows.append(row)
 
-os.chdir(r"C:\Scripts\Covid")
+os.chdir("WHERE THE OUTPUT CSV WILL BE WRITTEN TO")
 
 df = pd.DataFrame(dataRows,columns=columns)
 df.to_csv('CovidData_{}.csv'.format(time.strftime("%Y%m%d")))
